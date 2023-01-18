@@ -9,7 +9,7 @@ function Header() {
 
   const headerStyles = {
     border: "1px solid black",
-    width: "80%",
+    // width: "80%",
     // float: "center",
     // margin: "auto",
   }
