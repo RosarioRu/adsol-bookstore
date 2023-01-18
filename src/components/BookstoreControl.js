@@ -3,10 +3,7 @@ import HomePage from "./HomePage";
 
 function BookstoreControl() {
 
-  const controlStyles={
-    width: "90%",
-    float: "center",
-  }
+
 
   const [cartVisible, setCartVisible] = useState(false);
 
