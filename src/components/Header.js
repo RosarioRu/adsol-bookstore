@@ -5,8 +5,8 @@ function Header() {
 
   const headerStyles = {
     border: "1px solid black",
-    width: "90%",
-    align: "center"
+    width: "80%",
+    margin: "auto",
   }
 
   return (
