@@ -7,7 +7,9 @@ function HomePage() {
     width: "80%",
     margin: "auto",
     marginBottom: "0px",
+    paddingTop: "8%",
   }
+
   return (
     <React.Fragment>
       <div style={homeStyles}>

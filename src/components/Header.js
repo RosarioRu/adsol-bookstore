@@ -10,42 +10,22 @@ function Header() {
   const headerStyles = {
     border: "1px solid black",
     width: "80%",
-    margin: "auto",
+    // float: "center",
+    // margin: "auto",
   }
 
   return (
     <React.Fragment>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active"><Link to="/">Home</Link></a>
-      <a class="nav-item nav-link active"><Link to="/cart">Cart</Link></a>
-
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link disabled" href="#">Disabled</a>
-    </div>
-  </div>
-
-      <div style={headerStyles}>
-        <h1>Bookstore Header</h1>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/cart">Cart</Link>
-          </li>
-          <li>
-            <Link to="/sign-in">Account log in</Link>
-          </li>
-        </ul>
-      </div>
-
-    
-      </nav>
+      <Navbar className="navbar fixed-top navbar-light bg-light py-0" style={headerStyles}>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            {/* <span class="navbar-text">Bookstore</span> */}
+            <Link to="/" class="nav-item nav-link">Home</Link>
+            <Link to="/cart" class="nav-item nav-link">Cart</Link>
+            <Link to="/sign-in" class="nav-item nav-link" href="#">Account log in</Link>
+          </div>
+        </div>
+      </Navbar>
     </React.Fragment>
 );
 

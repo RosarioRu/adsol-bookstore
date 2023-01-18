@@ -6,6 +6,8 @@ function Cart() {
     width: "80%",
     float: "center",
     margin: "auto",
+    paddingTop: "8%",
+
   }
 
   return (
