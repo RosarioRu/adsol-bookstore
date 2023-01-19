@@ -4,10 +4,20 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* custom styles:  */
+
+.navbar-custom-header {
+  background-color: rgb(220, 228, 220);
+  /* border: 1px solid black; */
+  font-size: xx-small;
+}
+
+
