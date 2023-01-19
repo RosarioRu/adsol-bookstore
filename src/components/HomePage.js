@@ -7,7 +7,7 @@ function HomePage() {
     width: "80%",
     margin: "auto",
     marginBottom: "0px",
-    paddingTop: "8%",
+    // paddingTop: "8%",
   }
 
   return (

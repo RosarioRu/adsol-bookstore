@@ -8,7 +8,7 @@ import "./../../src/index.css";
 
 function Header() {
 
-  const headerStyles = {
+  const logoStyles = {
     marginLeft: "4%",
   }
     
@@ -18,7 +18,7 @@ function Header() {
     <React.Fragment>
       <Navbar className="navbar navbar-custom-header fixed-top py-0">
         <div class="logo">
-            <img class="navbar-brand" src={logoBookstoreImage} width="50" alt="logo for bookstore, black and white pic of books" style={headerStyles}></img>
+            <img class="navbar-brand" src={logoBookstoreImage} width="50" alt="logo for bookstore, black and white pic of books" style={logoStyles}></img>
         </div>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">

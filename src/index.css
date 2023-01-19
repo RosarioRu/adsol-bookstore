@@ -5,7 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
+  border: 2px solid red;
+  height: 100%;
+  padding-top: 8%;
 }
+
+html {
+  border: 2px solid blue;
+  height: 100%;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -16,8 +25,10 @@ code {
 
 .navbar-custom-header {
   background-color: rgb(220, 228, 220);
-  /* border: 1px solid black; */
+  border: 1px solid black;
   font-size: xx-small;
+  width: 80%;
+  margin: auto;
 }
 
 
