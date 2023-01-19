@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 
 
@@ -9,6 +9,7 @@ function Header() {
 
   const headerStyles = {
     border: "1px solid black",
+    
     // width: "80%",
     // float: "center",
     // margin: "auto",
@@ -17,7 +18,10 @@ function Header() {
   return (
     <React.Fragment>
       <Navbar className="navbar fixed-top navbar-light bg-light py-0" style={headerStyles}>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="logo">
+          
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             {/* <span class="navbar-text">Bookstore</span> */}
             <Link to="/" class="nav-item nav-link">Home</Link>
