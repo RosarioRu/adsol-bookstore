@@ -8,7 +8,7 @@ function Footer() {
 
   const footerStyles = {
     backgroundColor:"white",
-    position: "absolute",
+    position: "fixed",
     bottom: "0",
     width: "100%",
     height: "1.5rem",
