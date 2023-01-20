@@ -12,6 +12,9 @@ function HomePage() {
     width: "80%",
     margin: "auto",
     marginBottom: "0px",
+    // backgroundColor: "#e4dfd4",
+    // backgroundColor: "#F5F2ED",
+    backgroundColor: "rgb(220, 228, 220)",
 
     mainPictureStyles: {
       // border: "2px solid orange",
