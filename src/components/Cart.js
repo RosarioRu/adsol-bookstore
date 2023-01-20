@@ -4,9 +4,11 @@ function Cart() {
 
   const cartStyles={
     width: "80%",
+    height: "100vh",
     float: "center",
     margin: "auto",
     paddingTop: "8%",
+    backgroundColor: "rgb(220, 228, 220)",
 
   }
 
