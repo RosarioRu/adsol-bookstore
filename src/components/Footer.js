@@ -17,7 +17,7 @@ function Footer() {
 
   return (
     <React.Fragment>
-      <Navbar className="navbar navbar-custom-header py-0" style={footerStyles}>
+      <Navbar className="navbar navbar-custom-header-and-footer py-0" style={footerStyles}>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <Link to="/" class="nav-item nav-link">Home</Link>
