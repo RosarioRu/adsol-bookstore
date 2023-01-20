@@ -1,29 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import { Card, Row, Col, Container } from "react-bootstrap";
 
 function BestSellers() {
 
   const bestSellersStyles = {
-    border: "2px solid green"
+    border: "2px solid green",
+
+    bookCoverStyles : {
+      width: "329",
+      height: "500"
+    },
+                
   }
 
-    
-  return (
-    <React.Fragment>
-      <div style={bestSellersStyles}>
-        <p>Placeholder for Bestsellers!</p>
-      </div>
-    </React.Fragment>
-);
-
-
-}
-export default BestSellers;
-
-///
-import React, { useState, useEffect } from 'react';
-
-
-function BestSellers() {
 
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -39,7 +28,7 @@ function BestSellers() {
           }
         })
       .then((jsonifiedResponse) => {
-          setBestSellers(jsonifiedResponse.results)
+          setBestSellers(jsonifiedResponse.results.books)
           setIsLoaded(true)
         })
       .catch((error) => {
@@ -59,17 +48,37 @@ function BestSellers() {
         <ul>
           {bestSellers.map((book, index) =>
             <li key={index}>
-              <h3>{book.title}</h3>
-              {/* <p>{book.author}</p> */}
+              {/* <h3>{book.title}</h3>
+              <h3>{book.author}</h3> */}
+              <img style={bestSellersStyles.bookCoverStyles} src={book.book_image}></img>
+              {/* <img style={bestSellersStyles.bookCoverStyles} src="url({book.book_image})">{book.book_image}</img> */}
+              
             </li>
           )}
         </ul>
+        <Container>
+          <Row>
+            <Col>
+              <Card>card1</Card>
+              <Card>card2</Card>
+            </Col>
+          </Row>
+        </Container>
+
+        
       </React.Fragment>
     );
   }
+    
+//   return (
+//     <React.Fragment>
+//       <div style={bestSellersStyles}>
+//         <p>Placeholder for Bestsellers!</p>
+//       </div>
+//     </React.Fragment>
+// );
 
 
 }
-
-
 export default BestSellers;
+
