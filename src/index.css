@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   border: 2px solid red;
-  height:100vh;
+  height: 100%;
 }
 
 html {
@@ -23,7 +23,7 @@ code {
 
 .navbar-custom-header {
   background-color: rgb(220, 228, 220);
-  border: 1px solid black;
+  /* border: 1px solid black; */
   font-size: xx-small;
   width: 80%;
   margin: auto;
