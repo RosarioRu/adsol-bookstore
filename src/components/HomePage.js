@@ -1,4 +1,5 @@
 import React from "react";
+import BestSellers from "./BestSellers.js";
 
 function HomePage() {
 
@@ -14,7 +15,7 @@ function HomePage() {
     <React.Fragment>
       <div style={homeStyles}>
         <h1>Home page placeholder</h1>
-        <p>Best Sellers here</p>
+        <BestSellers />
         <p>Staff Picks here</p>
         <p>Events here</p>
       </div>
