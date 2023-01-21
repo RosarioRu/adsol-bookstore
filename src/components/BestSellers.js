@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Row, Col, Container } from "react-bootstrap";
+import { Card, Row, Col, Container, CardGroup } from "react-bootstrap";
 
 function BestSellers() {
 
   const bestSellersStyles = {
     border: "2px solid green",
+
+    // horizontalStyle : {
+    //   overflowX:"scroll"
+    // },
 
     bookCoverStyles : {
       width: "329",
@@ -45,22 +49,17 @@ function BestSellers() {
     return (
       <React.Fragment>
         <h1>Best Sellers</h1>
-        <ul>
-          {bestSellers.map((book, index) =>
-            <li key={index}>
-              {/* <h3>{book.title}</h3>
-              <h3>{book.author}</h3> */}
-              <img style={bestSellersStyles.bookCoverStyles} src={book.book_image}></img>
-              {/* <img style={bestSellersStyles.bookCoverStyles} src="url({book.book_image})">{book.book_image}</img> */}
-              
-            </li>
-          )}
-        </ul>
+        
         <Container>
           <Row>
             <Col>
-              <Card>card1</Card>
-              <Card>card2</Card>
+              <CardGroup>
+                {bestSellers.slice(0,6).map((book, index) =>
+                  <Card key={index}>
+                    <img style={bestSellersStyles.bookCoverStyles} src={book.book_image}></img>
+                  </Card>
+                )}
+              </CardGroup>
             </Col>
           </Row>
         </Container>
