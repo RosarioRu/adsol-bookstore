@@ -13,6 +13,7 @@ function HomePage() {
     margin: "auto",
     marginBottom: "0px",
     backgroundColor: "#dce4dc",
+    paddingTop: "1.5%",
 
     mainPictureStyles: {
       // border: "2px solid orange",
@@ -20,6 +21,7 @@ function HomePage() {
       marginLeft: "10%",
       marginRight: "10%",
       opacity: "0.85", 
+      paddingBottom: "2%",
     }, 
 
     recommendationsStyles: {
@@ -34,7 +36,7 @@ function HomePage() {
       <div style={homeStyles}>
         <img class="" src={storefront2Image} alt="photograph of bookstore storefront" style={homeStyles.mainPictureStyles}></img>
         <div class="headings">
-          <h3 style={{fontSize: "x-large"}}>Portland Bookstore</h3>      
+          {/* <h3 style={{fontSize: "x-large"}}>Portland Bookstore</h3>       */}
         </div>
         <div style={homeStyles.recommendationsStyles}>
           <BestSellers />

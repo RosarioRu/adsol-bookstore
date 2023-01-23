@@ -10,6 +10,11 @@ function Header() {
 
   const logoStyles = {
     marginLeft: "4%",
+
+    storeName: {
+      fontSize: "x-large",
+    },
+
   }
 
     
@@ -17,8 +22,9 @@ function Header() {
     <React.Fragment>
       <Navbar className="navbar navbar-custom-header-and-footer position-top py-0">
         <div class="logo">
-            <img class="navbar-brand" src={logoBookstoreImage} width="50" alt="logo for bookstore, black and white pic of books" style={logoStyles}></img>
+            <img class="navbar-brand" src={logoBookstoreImage} width="50" alt="logo for bookstore, black and white pic of books" style={logoStyles}></img> 
         </div>
+        <p class="headings" style={logoStyles.storeName}>Portland Bookstore</p>  
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <Link to="/" class="nav-item nav-link">Home</Link>

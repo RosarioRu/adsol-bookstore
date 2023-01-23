@@ -23,8 +23,8 @@ code {
 
 .navbar-custom-header-and-footer {
   /* background-color: rgb(220, 228, 220); */
-  border: 1px solid black;
-  font-size: xx-small;
+  /* border: 1px solid black; */
+  font-size: x-small;
   width: 80%;
   margin: auto;
 }

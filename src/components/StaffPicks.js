@@ -38,7 +38,7 @@ function StaffPicks() {
             <CardGroup>
               {staffPicks.map((book, index) =>
                 <Card key={index}>
-                  <img style={staffPicksStyles.bookCoverStyles} src={book.book_image} alt="book cover image"></img>
+                  <img style={staffPicksStyles.bookCoverStyles} src={book.book_image} alt="book cover"></img>
                 </Card>
               )}
             </CardGroup>
