@@ -19,23 +19,27 @@ function HomePage() {
       width: "80%",
       marginLeft: "10%",
       marginRight: "10%",
-      opacity: "0.85",
-      
-      
-    }
+      opacity: "0.85", 
+    }, 
 
-    // paddingTop: "8%",
+    recommendationsStyles: {
+      display: "flex",
+      flexDirection: "row", 
+      paddingRight: "3%",
+    },
   }
 
   return (
     <React.Fragment>
       <div style={homeStyles}>
         <img class="" src={storefront2Image} alt="photograph of bookstore storefront" style={homeStyles.mainPictureStyles}></img>
-          <div class="headings">
-            <h3 style={{fontSize: "x-large"}}>Portland Bookstore</h3>      
-          </div>
-        <BestSellers />
-        <StaffPicks />
+        <div class="headings">
+          <h3 style={{fontSize: "x-large"}}>Portland Bookstore</h3>      
+        </div>
+        <div style={homeStyles.recommendationsStyles}>
+          <BestSellers />
+          <StaffPicks />
+        </div>
         <Events />
       </div>
     </React.Fragment>

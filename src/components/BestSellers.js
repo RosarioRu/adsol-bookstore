@@ -7,29 +7,15 @@ function BestSellers() {
     border: "2px solid green",
 
     bestSellersBookshelfStyles : {
-      // border: "2px solid black",
       padding: "1%",
       paddingTop: "0.5%",
       width: "50%",
       backgroundColor: "rgb(229, 234, 229)",
       marginBottom: "3%",
       marginTop: "3%",
-      marginLeft: "1%"
-
-      
-      // textAlign: "center",
-
-    },
-
-    // horizontalStyle : {
-    //   overflowX:"scroll"
-    // },
-
-    // bookCoverStyles : {
-    //   width: "329",
-    //   height: "500"
-    // },
-                
+      marginLeft: "1%", 
+      marginRight: "0.5%",
+    },          
   }
 
 
@@ -70,7 +56,7 @@ function BestSellers() {
           <Row>
             <Col>
               <CardGroup>
-                {bestSellers.slice(0,6).map((book, index) =>
+                {bestSellers.slice(0,5).map((book, index) =>
                   <Card key={index}>
                     <img style={bestSellersStyles.bookCoverStyles} src={book.book_image} alt="Book cover images of the current top 5 NYT bestsellers"></img>
                   </Card>
