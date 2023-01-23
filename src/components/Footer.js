@@ -12,7 +12,7 @@ function Footer() {
     bottom: "0",
     width: "100%",
     height: "1.5rem",
-    borderTop: "0.5px solid grey"
+    // borderTop: "0.5px solid grey"
   }
 
   return (

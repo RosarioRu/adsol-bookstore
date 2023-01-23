@@ -8,12 +8,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
+      {/* div below wraps all content into a stylable container that overrides bootstrap */}
+      {/* <div style={{backgroundColor: "rgb(220, 228, 220)", width: "80%", margin: "auto"}}> */}
+      <div style={{backgroundColor: "rgb(229, 234, 229)"}}> 
+    
+
+
       <Header />
       <Routes>
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/" element={<BookstoreControl />} />
       </Routes>
+      </div>
       <Footer />
     </Router>
   )

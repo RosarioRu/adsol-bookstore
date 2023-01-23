@@ -12,16 +12,14 @@ function HomePage() {
     width: "80%",
     margin: "auto",
     marginBottom: "0px",
-    // backgroundColor: "#e4dfd4",
-    // backgroundColor: "#F5F2ED",
-    // backgroundColor: "rgb(220, 228, 220)",
+    backgroundColor: "#dce4dc",
 
     mainPictureStyles: {
       // border: "2px solid orange",
       width: "80%",
       marginLeft: "10%",
       marginRight: "10%",
-      opacity: "0.85"
+      opacity: "0.85",
       
       
     }
@@ -33,12 +31,9 @@ function HomePage() {
     <React.Fragment>
       <div style={homeStyles}>
         <img class="" src={storefront2Image} alt="photograph of bookstore storefront" style={homeStyles.mainPictureStyles}></img>
-        
           <div class="headings">
-            <h3>Portland Bookstore</h3>      
-            {/* <p><em>Portland's cozy reading nook since 2004</em></p>             */}
+            <h3 style={{fontSize: "x-large"}}>Portland Bookstore</h3>      
           </div>
-        
         <BestSellers />
         <StaffPicks />
         <Events />

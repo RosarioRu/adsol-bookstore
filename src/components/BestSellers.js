@@ -6,14 +6,29 @@ function BestSellers() {
   const bestSellersStyles = {
     border: "2px solid green",
 
+    bestSellersBookshelfStyles : {
+      // border: "2px solid black",
+      padding: "1%",
+      paddingTop: "0.5%",
+      width: "50%",
+      backgroundColor: "rgb(229, 234, 229)",
+      marginBottom: "3%",
+      marginTop: "3%",
+      marginLeft: "1%"
+
+      
+      // textAlign: "center",
+
+    },
+
     // horizontalStyle : {
     //   overflowX:"scroll"
     // },
 
-    bookCoverStyles : {
-      width: "329",
-      height: "500"
-    },
+    // bookCoverStyles : {
+    //   width: "329",
+    //   height: "500"
+    // },
                 
   }
 
@@ -48,21 +63,23 @@ function BestSellers() {
   } else {
     return (
       <React.Fragment>
-        <h1>Best Sellers</h1>
         
+        <div style={bestSellersStyles.bestSellersBookshelfStyles} className="headings">
+        <h4 style={{fontSize: "large"}}>NYT Best Sellers</h4>
         <Container>
           <Row>
             <Col>
               <CardGroup>
                 {bestSellers.slice(0,6).map((book, index) =>
                   <Card key={index}>
-                    <img style={bestSellersStyles.bookCoverStyles} src={book.book_image}></img>
+                    <img style={bestSellersStyles.bookCoverStyles} src={book.book_image} alt="Book cover images of the current top 5 NYT bestsellers"></img>
                   </Card>
                 )}
               </CardGroup>
             </Col>
           </Row>
         </Container>
+        </div>
 
         
       </React.Fragment>
