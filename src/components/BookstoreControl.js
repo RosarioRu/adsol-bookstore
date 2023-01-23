@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react";
 import HomePage from "./HomePage";
-import { collection, addDoc, onSnapshot } from "firebase/firestore";
-import db from './../firebase.js'
+import Inventory from "./Inventory";
+import AddBookFom from "./AddBookForm";
+import { collection, addDoc, onSnapshot, doc, deleteDoc, query, where, getDocs } from "firebase/firestore";
+import { db } from './../firebase.js'
 
 function BookstoreControl() {
   
+  const [addBookFormVisible, setAddBookFormVisible] = (false);
   const [cartVisible, setCartVisible] = useState(false);
   const [allBooksInventory, setAllBooksInventory] = useState([]);
   const [inventoryDisplayed, setInventoryDisplayed] = useState(false);
+  const [error, setError] = useState(null);
 
+//useEffect funtions below update content on webpage: 
   useEffect(() => {
     const unSubscribe = onSnapshot(
       collection(db, "books"),
@@ -32,6 +37,18 @@ function BookstoreControl() {
     return () => unSubscribe();
   }, []);
 
+  //functions below interact with firestore database:
+
+  //onAddingBooks triggers this func from AddBookFom component
+  const handleAddingNewBookToInventory = async (newBookData) =>
+  {
+    //some code here to check if isbn already exists in db
+    await addDoc(collection(db, "books"), newBookData);
+    setAddBookFormVisible(false);
+  }
+
+
+
   // what is displayed:
 
   let currentlyVisibleState=null;
@@ -39,6 +56,12 @@ function BookstoreControl() {
   if(error) {
     currentlyVisibleState = <p>Error: {error}</p>
   } 
+  else if (addBookFormVisible) {
+    currentlyVisibleState = 
+      <AddBookFom 
+        onAddingBooks={handleAddingNewBookToInventory}
+      />
+  }
   else if (inventoryDisplayed) {
     currentlyVisibleState = 
       <Inventory
