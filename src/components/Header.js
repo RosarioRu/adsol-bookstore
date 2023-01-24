@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import logoBookstoreImage from './../img/logoBookstore.jpg';
 import "./../../src/index.css";
+import PropTypes from "prop-types";
 
 
-function Header() {
+function Header(props) {
 
   const logoStyles = {
     marginLeft: "4%",
@@ -30,12 +31,16 @@ function Header() {
             <Link to="/" class="nav-item nav-link">Home</Link>
             <Link to="/cart" class="nav-item nav-link">Cart</Link>
             <Link to="/sign-in" class="nav-item nav-link" href="#">Account log in</Link>
+            <button onClick={()=>props.onClickingSeeInventory}>All Books</button>
           </div>
         </div>
       </Navbar>  
     </React.Fragment>
-);
-
-
+  );
 }
+
+Header.propTypes = {
+  onClickingSeeInventory: PropTypes.func,
+};
+
 export default Header;

@@ -3,17 +3,19 @@ import HomePage from "./HomePage";
 import Inventory from "./Inventory";
 import AddBookFom from "./AddBookForm";
 import { collection, addDoc, onSnapshot, doc, deleteDoc, query, where, getDocs } from "firebase/firestore";
-import { db } from './../firebase.js'
+import db from './../firebase.js'
 
 function BookstoreControl() {
   
-  const [addBookFormVisible, setAddBookFormVisible] = (false);
+  const [addBookFormVisible, setAddBookFormVisible] = useState(false);
   const [cartVisible, setCartVisible] = useState(false);
   const [allBooksInventory, setAllBooksInventory] = useState([]);
   const [inventoryDisplayed, setInventoryDisplayed] = useState(false);
   const [error, setError] = useState(null);
 
 //useEffect funtions below update content on webpage: 
+
+//this one sets the content of 'db' to a list of books objs with id/title/auth/desc/isbn from db data
   useEffect(() => {
     const unSubscribe = onSnapshot(
       collection(db, "books"),
@@ -27,6 +29,7 @@ function BookstoreControl() {
             description: doc.data().description,
             isbn: doc.data().isbn,
           });
+          setAllBooksInventory(books);
         });
 
       },
@@ -36,6 +39,12 @@ function BookstoreControl() {
     );
     return () => unSubscribe();
   }, []);
+
+
+  const handleSeeInventoryClick= () => {
+    setInventoryDisplayed(true);
+  }
+
 
   //functions below interact with firestore database:
 
@@ -53,7 +62,7 @@ function BookstoreControl() {
 
   let currentlyVisibleState=null;
 
-  if(error) {
+  if (error != null) {
     currentlyVisibleState = <p>Error: {error}</p>
   } 
   else if (addBookFormVisible) {
@@ -65,10 +74,15 @@ function BookstoreControl() {
   else if (inventoryDisplayed) {
     currentlyVisibleState = 
       <Inventory
-        inventory={allBooksInventory} />;
+        inventory={allBooksInventory}
+      />;
   } 
-  else if (cartVisible === false) {
-    currentlyVisibleState = <HomePage />
+  else 
+  {
+    currentlyVisibleState = 
+      <HomePage 
+        onClickingSeeInventory={handleSeeInventoryClick}
+      />
   }
 
   return(
